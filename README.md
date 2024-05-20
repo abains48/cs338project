@@ -22,17 +22,19 @@ As such, this repo uses MySQL for all database logic and PHP for web-based logic
 
 Clone the repository to a dedicated folder using:
 
-``bash
+```bash
    git clone https://github.com/abains48/cs338project.git
+```
 
 
 #### 2. MySQL
 
 After installing MySQL run these two commands in your terminal. Make sure to replace PATH in the second statement with the real path to the test.sql file in the cloned git repo. 
 
-``bash
+```bash
    sudo /usr/local/mysql/support-files/mysql.server start
    mysql -u root -p < PATH/test.sql
+```
 
 
 This will create the testDB in your MySQL. 
@@ -43,15 +45,17 @@ Ensure the PHP is correctly installed.
 
 Then, change PASS in the following line in the test.php file to the password of your root in MySQL:
 
-``php 
+```php 
     $password = PASS;
+```
 
 To run PHP script execute the following commands. Ensure that PATH is replaced by the absolute path of the git repo on your local. 
 
-``bash
+```bash
     cd PATH
     php -S 127.0.0.1:8000 
     php test.php
+```
 
 
 Note: This will show the HTML in terminal as a sanity check that the connection is working. To view this in a web browser, start a PHP instance in terminal and navigate to the local php address. 
