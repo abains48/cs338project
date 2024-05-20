@@ -43,9 +43,10 @@ This will create the testDB in your MySQL.
 
 Ensure the PHP is correctly installed. 
 
-Then, change PASS in the following line in the test.php file to the password of your root in MySQL:
+Then, change the USERNAME and PASS in the following lines in the test.php file to the username and password of your root user in MySQL:
 
-```php 
+```php
+    $username = USERNAME; 
     $password = PASS;
 ```
 
