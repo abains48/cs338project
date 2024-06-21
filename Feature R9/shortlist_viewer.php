@@ -12,6 +12,9 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
 die("Connection failed: " . $conn->connect_error); }
 
+$user_id = 10000;
+$sid = "8b42e";
+
 $sql = "
 select 
 	c.company_id,
@@ -23,11 +26,11 @@ select
 from shortlist_contains s
 left join public_companies c
 	on c.company_id = s.company_id
-where s.user_id = '10000' and s.sid = '8b42e'
+where s.user_id = '$user_id' and s.sid = '$sid'
 ";
+
+
 $result = $conn->query($sql);
-
-
 
 if ($result->num_rows > 0) {
     // Output the data of each row
